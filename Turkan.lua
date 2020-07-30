@@ -6404,10 +6404,10 @@ local Get_Is_Id = Get_Is_Id:gsub('#game',Num_Games)
 local Get_Is_Id = Get_Is_Id:gsub('#photos',Total_Photp) 
 sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,Get_Is_Id)
 else
-sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n 𝒊𝒅 𓂅  '..Id..' 𓍯\n 𝒖𝒔𝒆𝒓𓂅 '..UserName_User..' 𓍯\n 𝒔𝒕𝒂𓂅 '..Status_Gps..' 𓍯\n 𝒎𝒔𝒈𝒆𓂅 '..NumMsg..' 𓍯')
+sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n𓂅 iD : '..Id..'\n𓂅 User Naem : '..UserName_User..'\n𓂅 Sat : '..Status_Gps..'\n𓂅 photos : '..Total_Photp..'\n𓂅 Points : '..Num_Games..'\n𓂅 Messages : '..NumMsg..'')
 end
 else
-send(msg.chat_id_, msg.id_,'\n 𝒊𝒅 𓂅  '..Id..' 𓍯\n 𝒖𝒔𝒆𝒓𓂅 ['..UserName_User..'] 𓍯\n 𝒔𝒕𝒂𓂅 '..Status_Gps..' 𓍯\n 𝒎𝒔𝒈𝒆𓂅 '..NumMsg..' 𓍯') 
+send(msg.chat_id_, msg.id_,'\n𓂅 iD : '..Id..'\n𓂅 User Naem : '..UserName_User..'\n𓂅 Sat : '..Status_Gps..'\n𓂅 photos : '..Total_Photp..'\n𓂅 Points : '..Num_Games..'\n𓂅 Messages : '..NumMsg..'') 
 end
 else
 if Get_Is_Id then
@@ -6423,7 +6423,7 @@ local Get_Is_Id = Get_Is_Id:gsub('#game',Num_Games)
 local Get_Is_Id = Get_Is_Id:gsub('#photos',Total_Photp) 
 send(msg.chat_id_, msg.id_,'['..Get_Is_Id..']') 
 else
-send(msg.chat_id_, msg.id_,'\n 𝒊𝒅 𓂅  '..Id..' 𓍯\n 𝒖𝒔𝒆𝒓𓂅 ['..UserName_User..'] 𓍯\n 𝒔𝒕𝒂𓂅 '..Status_Gps..' 𓍯\n 𝒎𝒔𝒈𝒆𓂅 '..NumMsg..' 𓍯') 
+send(msg.chat_id_, msg.id_,'\n𓂅 iD : '..Id..'\n𓂅 User Naem : '..UserName_User..'\n𓂅 Sat : '..Status_Gps..'\n𓂅 photos : '..Total_Photp..'\n𓂅 Points : '..Num_Games..'\n𓂅 Messages : '..NumMsg..'') 
 end
 end
 end,nil)   
@@ -6461,7 +6461,7 @@ local Status_Gps = Get_Rank(Id,msg.chat_id_)
 local NumMessageEdit = redis:get(bot_id..'Turkan:Num:Message:Edit'..msg.chat_id_..data.id_) or 0
 local Num_Games = redis:get(bot_id.."Turkan:Msg_User"..msg.chat_id_..":"..data.id_) or 0
 local Add_Mem = redis:get(bot_id.."Turkan:Num:Add:Memp"..msg.chat_id_..":"..data.id_) or 0
-send(msg.chat_id_, msg.id_,'\n* 𝒊𝒅 𓂅  '..Id..' 𓍯\n 𝒎𝒔𝒈𝒆𓂅 '..NumMsg..' 𓍯\n 𝒖𝒔𝒆𝒓𓂅 *['..UserName_User..'] 𓍯*\n 𝒔𝒕𝒂𓂅 '..Status_Gps..' 𓍯*') 
+send(msg.chat_id_, msg.id_,'\n𓂅 iD : '..Id..'\n𓂅 User Naem : '..UserName_User..'\n𓂅 Sat : '..Status_Gps..'\n𓂅 Points : '..Num_Games..'\n𓂅 Messages : '..NumMsg..'') 
 end,nil)   
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Status, nil)
@@ -6484,7 +6484,7 @@ local Status_Gps = Get_Rank(Id,msg.chat_id_)
 local NumMessageEdit = redis:get(bot_id..'Turkan:Num:Message:Edit'..msg.chat_id_..data.id_) or 0
 local Num_Games = redis:get(bot_id.."Turkan:Msg_User"..msg.chat_id_..":"..data.id_) or 0
 local Add_Mem = redis:get(bot_id.."Turkan:Num:Add:Memp"..msg.chat_id_..":"..data.id_) or 0
-send(msg.chat_id_, msg.id_,'\n* 𝒊𝒅 𓂅  '..Id..' 𓍯\n 𝒎𝒔𝒈𝒆𓂅 '..NumMsg..' 𓍯\n 𝒖𝒔𝒆𝒓𓂅 *['..UserName_User..'] 𓍯*\n 𝒔𝒕𝒂𓂅 '..Status_Gps..' 𓍯*') 
+send(msg.chat_id_, msg.id_,'\n𓂅 iD : '..Id..'\n𓂅 User Naem : '..UserName_User..'\n𓂅 Sat : '..Status_Gps..'\n𓂅 Points : '..Num_Games..'\n𓂅 Messages : '..NumMsg..'') 
 end,nil)   
 else
 send(msg.chat_id_, msg.id_,'ܛ لا يوجد حساب بهاذا المعرف')
