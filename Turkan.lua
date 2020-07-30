@@ -2137,12 +2137,9 @@ end
 ------------------------------------------------------------------------------------------------------------
 if text == 'تفعيل' and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if TypeForChat ~= 'ForSuppur' then
 send(msg.chat_id_, msg.id_,'ܛ المجموعه عاديه وليست خارقه لا تستطيع تفعيلي يرجى ان تضع سجل رسائل المجموعه ضاهر وليس مخفي ومن بعدها يمكنك رفعي ادمن ثم تفعيلي') 
 return false
@@ -2197,12 +2194,9 @@ end
 ------------------------------------------------------------------------------------------------------------
 if text == 'تعطيل' and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not redis:sismember(bot_id..'Turkan:Chek:Groups',msg.chat_id_) then
@@ -2242,12 +2236,9 @@ end
 ------------------------------------------------------------------------------------------------------------
 if text == 'تفعيل' and not DeveloperBot(msg) and not redis:get(bot_id..'Turkan:Free:Bot') then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if TypeForChat ~= 'ForSuppur' then
 send(msg.chat_id_, msg.id_,'ܛ المجموعه عاديه وليست خارقه لا تستطيع تفعيلي يرجى ان تضع سجل رسائل المجموعه ضاهر وليس مخفي ومن بعدها يمكنك رفعي ادمن ثم تفعيلي') 
 return false
@@ -3396,12 +3387,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:sadd(bot_id.."Turkan:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم ترقيته منشئ اساسي")  
@@ -3410,12 +3398,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("تنزيل منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:srem(bot_id.."Turkan:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم تنزيله من المنشئين")  
@@ -3424,12 +3409,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
 function FunctionStatus(arg, result)
@@ -3460,12 +3442,9 @@ end,nil)
 end
 if text == "رفع منشئ" and tonumber(msg.reply_to_message_id_) ~= 0 and PresidentGroup(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:sadd(bot_id.."Turkan:Constructor"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم ترقيته منشئ في المجموعه")  
@@ -3488,12 +3467,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:sadd(bot_id.."Turkan:Manager"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم ترقيته مدير المجموعه")  
@@ -3502,12 +3478,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("تنزيل مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:srem(bot_id.."Turkan:Manager"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم تنزيله من المدراء")  
@@ -3516,12 +3489,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -3534,12 +3504,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("تنزيل ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:srem(bot_id.."Turkan:Mod:User"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم تنزيله من ادمنيه المجموعه")  
@@ -3548,12 +3515,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -3566,12 +3530,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("تنزيل مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 redis:srem(bot_id.."Turkan:Special:User"..msg.chat_id_, result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","تم تنزيله من المميزين")  
@@ -3797,12 +3758,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^حذف مطو�
 end
 if text and text:match("^رفع منشئ اساسي @(.*)$") and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -3819,12 +3777,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^رفع منش�
 end
 if text and text:match("^تنزيل منشئ اساسي @(.*)$") and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 redis:srem(bot_id.."Turkan:Basic:Constructor"..msg.chat_id_, result.id_)
@@ -3887,12 +3842,9 @@ end,nil)
 end
 if text and text:match("^رفع منشئ @(.*)$") and PresidentGroup(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -3909,12 +3861,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^رفع منش�
 end
 if text and text:match("^تنزيل منشئ @(.*)$") and PresidentGroup(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 redis:srem(bot_id.."Turkan:Constructor"..msg.chat_id_, result.id_)
@@ -3927,12 +3876,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^تنزيل م�
 end
 if text and text:match("^رفع مدير @(.*)$") and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -3949,12 +3895,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^رفع مدي�
 end
 if text and text:match("^تنزيل مدير @(.*)$") and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 redis:srem(bot_id.."Turkan:Manager"..msg.chat_id_, result.id_)
@@ -3967,12 +3910,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^تنزيل م�
 end
 if text and text:match("^رفع ادمن @(.*)$") and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -3993,12 +3933,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^رفع ادم�
 end
 if text and text:match("^تنزيل ادمن @(.*)$") and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 redis:srem(bot_id.."Turkan:Mod:User"..msg.chat_id_, result.id_)
@@ -4011,12 +3948,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^تنزيل ا�
 end
 if text and text:match("^رفع مميز @(.*)$") and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -4037,12 +3971,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^رفع ممي�
 end
 if text and text:match("^تنزيل مميز @(.*)$") and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 function FunctionStatus(arg, result)
 if (result.id_) then
 redis:srem(bot_id.."Turkan:Special:User"..msg.chat_id_, result.id_)
@@ -4352,12 +4283,9 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text:match("^الغاء ت�
 end
 if text and text:match("^طرد @(.*)$") and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,"ܛ عذرآ البوت ليس ادمن") 
 return false  
@@ -4445,78 +4373,58 @@ Send_Options(msg,text:match("^حذف مطور (%d+)$"),"reply"," تم تنزيل
 end
 if text and text:match("^رفع منشئ اساسي (%d+)$") and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:sadd(bot_id.."Turkan:Basic:Constructor"..msg.chat_id_, text:match("^رفع منشئ اساسي (%d+)$") )
 Send_Options(msg,text:match("^رفع منشئ اساسي (%d+)$") ,"reply"," تم ترقيته منشئ اساسي")  
 end
 if text and text:match("^تنزيل منشئ اساسي (%d+)$") and DeveloperBot(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:srem(bot_id.."Turkan:Basic:Constructor"..msg.chat_id_, text:match("^تنزيل منشئ اساسي (%d+)$") )
 Send_Options(msg,text:match("^تنزيل منشئ اساسي (%d+)$") ,"reply"," تم تنزيله من المنشئين")  
 end
 if text and text:match("^رفع منشئ (%d+)$") and PresidentGroup(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:sadd(bot_id.."Turkan:Constructor"..msg.chat_id_, text:match("^رفع منشئ (%d+)$"))
 Send_Options(msg,text:match("^رفع منشئ (%d+)$"),"reply"," تم ترقيته منشئ في المجموعه")  
 end
+end
 if text and text:match("^تنزيل منشئ (%d+)$") and PresidentGroup(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:srem(bot_id.."Turkan:Constructor"..msg.chat_id_, text:match("^تنزيل منشئ (%d+)$"))
 Send_Options(msg,text:match("^تنزيل منشئ (%d+)$"),"reply"," تم تنزيله من المنشئين")  
 end
 if text and text:match("^رفع مدير (%d+)$") and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:sadd(bot_id.."Turkan:Manager"..msg.chat_id_, text:match("^رفع مدير (%d+)$") )
 Send_Options(msg,text:match("^رفع مدير (%d+)$") ,"reply"," تم ترقيته مدير المجموعه")  
 end
 if text and text:match("^تنزيل مدير (%d+)$") and Constructor(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:srem(bot_id.."Turkan:Manager"..msg.chat_id_, text:match("^تنزيل مدير (%d+)$") )
 Send_Options(msg,text:match("^تنزيل مدير (%d+)$") ,"reply"," تم تنزيله من المدراء")  
 end
 if text and text:match("^رفع ادمن (%d+)$") and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -4526,23 +4434,17 @@ Send_Options(msg,text:match("^رفع ادمن (%d+)$"),"reply"," تم ترقيت
 end
 if text and text:match("^تنزيل ادمن (%d+)$") and Owner(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:srem(bot_id.."Turkan:Mod:User"..msg.chat_id_, text:match("^تنزيل ادمن (%d+)$"))
 Send_Options(msg,text:match("^تنزيل ادمن (%d+)$"),"reply"," تم تنزيله من ادمنيه المجموعه")  
 end
 if text and text:match("^رفع مميز (%d+)$") and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 if not Constructor(msg) and redis:get(bot_id.."Turkan:Cheking:Seted"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'ܛلا تستطيع رفع احد وذالك لان تم تعطيل الرفع من قبل المنشئين')
 return false
@@ -4552,12 +4454,9 @@ Send_Options(msg,text:match("^رفع مميز (%d+)$"),"reply"," تم ترقيت
 end
 if text and text:match("^تنزيل مميز (%d+)$") and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end 
+else
 redis:srem(bot_id.."Turkan:Special:User"..msg.chat_id_, text:match("^تنزيل مميز (%d+)$") )
 Send_Options(msg,text:match("^تنزيل مميز (%d+)$") ,"reply"," تم تنزيله من المميزين")  
 end
@@ -5465,12 +5364,9 @@ return false
 end
 if text ==("تثبيت") and msg.reply_to_message_id_ ~= 0 and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end  
+else 
 if redis:sismember(bot_id.."Turkan:Lock:pin",msg.chat_id_) and not Constructor(msg) then
 send(msg.chat_id_,msg.id_,"ܛ التثبيت مقفل من قبل المنشئين")  
 return false end
@@ -5491,12 +5387,9 @@ return false
 end
 if text == "الغاء التثبيت" and Admin(msg) then
 local url,res = https.request('https://falcon.ikekoi.site/file/Turkan.php?id='..msg.sender_user_id_)
-if res then
-if res == true then
+if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
-return false 
-end
-end  
+else 
 if redis:sismember(bot_id.."Turkan:Lock:pin",msg.chat_id_) and not Constructor(msg) then
 send(msg.chat_id_,msg.id_,"ܛ التثبيت مقفل من قبل المنشئين")  
 return false end
