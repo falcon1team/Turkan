@@ -2184,7 +2184,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-if not msg.sender_user_id_ == Id_Dev then
+if not Dev_Turkan(msg) then
 sendText(Id_Dev,'ܛ تم تفعيل مجموعه جديده\n'..'\nܛ بواسطة : '..Name..''..'\nܛ ايدي المجموعه : `'..IdChat..'`'..'\nܛ عدد اعضاء المجموعه *: '..NumMember..'*'..'\nܛ اسم المجموعه : ['..NameChat..']'..'\nܛ الرابط : ['..LinkGp..']',0,'md')
 end
 end
@@ -2228,7 +2228,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-if not msg.sender_user_id_ == Id_Dev then
+if not Dev_Turkan(msg) then
 sendText(Id_Dev,'ܛ تم تعطيل مجموعه جديده\n'..'\nܛ بواسطة : '..Name..''..'\nܛ ايدي المجموعه : `'..IdChat..'`\nܛ اسم المجموعه : ['..NameChat..']',0,'md')
 end
 end
@@ -2296,7 +2296,7 @@ local NameChat = NameChat:gsub("`","")
 local NameChat = NameChat:gsub("*","") 
 local NameChat = NameChat:gsub("{","") 
 local NameChat = NameChat:gsub("}","") 
-if not msg.sender_user_id_ == Id_Dev then
+if not Dev_Turkan(msg) then
 sendText(Id_Dev,'ܛ تم تفعيل مجموعه جديده\nܛ بواسطة : '..Name..'\nܛ موقعه في المجموعه : '..Status_Rt..'\nܛ ايدي المجموعه : `'..msg.chat_id_..'`\nܛ عدد اعضاء المجموعه *: '..NumMember..'*\nܛ اسم المجموعه : ['..NameChat..']\nܛ الرابط : ['..LinkChat..']',0,'md')
 end
 end
