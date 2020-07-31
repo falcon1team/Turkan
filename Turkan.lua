@@ -2314,7 +2314,7 @@ if url == 'false' then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناه السورس \n⌔︙قناه السورس ← { @TFTTTT }')   
 return false 
 end
-if msg.sender_user_id_ == Id_Dev then
+if Dev_Turkan(msg) then
 local Text_keyboard = 'ܛ اهلا بك في اوامر الكيبورد الجاهزه'
 local List_keyboard = {
 {'تفعيل تواصل البوت 🔔','تعطيل تواصل البوت 🔕'},
@@ -2357,7 +2357,7 @@ end
 redis:setex(bot_id..'Turkan:Ban:Cmd:Start'..msg.sender_user_id_,60,true)
 return false
 end
-if not msg.sender_user_id_ == Id_Dev and not redis:sismember(bot_id..'Turkan:User:Ban:Pv',msg.sender_user_id_) and not redis:get(bot_id..'Turkan:Lock:Twasl') then
+if not Dev_Turkan(msg) and not redis:sismember(bot_id..'Turkan:User:Ban:Pv',msg.sender_user_id_) and not redis:get(bot_id..'Turkan:Lock:Twasl') then
 send(msg.sender_user_id_,msg.id_,'ܛ تم ارسال رسالتك الى المطور ← { ['..UserName_Dev..'] }')    
 local List_id = {Id_Dev,msg.sender_user_id_}
 for k,v in pairs(List_id) do   
